@@ -146,7 +146,9 @@ Simply
 
    */
    
-   // Get post/detail by id from Search result
+   // Get post/episode by id from Search/Series result
+   
+   GetPost(21911).then(async(data) => {console.log(data)})
    
    /*
    Example 

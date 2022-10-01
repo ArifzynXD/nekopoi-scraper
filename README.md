@@ -11,7 +11,7 @@
 
 ### How To Use
 
-1. install Packages
+1. Install Packages
    ```sh
    npm install nekopoi-scrapper
    or

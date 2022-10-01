@@ -4,11 +4,19 @@
   "description": "Nekopoi scrapper",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
-  "keywords": ["scrapper"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xct007/nekopoi-scrapper.git"
+  },
+  "keywords": ["scrapper", "api", "download"],
   "author": "david",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xct007/nekopoi-scrapper/issues"
+  },
+  "homepage": "https://github.com/xct007/nekopoi-scrapper",
   "dependencies": {
     "axios": "^0.27.2"
   }

@@ -4,7 +4,7 @@ const {
   GetSeries,
   GetPost,
   Search
-} = require('nekopoi-scrapper')
+} = require('./index.js')
 
 ListAll(1, 'hentai').then(async(data) => {console.log(data)})
 

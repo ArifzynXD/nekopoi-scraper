@@ -13,9 +13,9 @@
 
 1. Install Packages
    ```sh
-   npm install nekopoi-scrapper
+   npm install nekopoi-scraper
    or
-   yarn add nekopoi-scrapper
+   yarn add nekopoi-scraper
    ```
 2. Example
     ```js

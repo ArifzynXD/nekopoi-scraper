@@ -1,5 +1,6 @@
 <a name="readme-top"></a>
 <br />
+<h3 align="center">Simple</h3>
 <div align="center">
   <a href="#">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -9,7 +10,7 @@
 </div>
 
 ### How To Use
-Simply 
+
 1. install Packages
    ```sh
    npm install nekopoi-scrapper
@@ -25,13 +26,13 @@ Simply
       GetPost,
       Search
    } = require('nekopoi-scrapper')
-   
-   
+
+
    // Get Hentai by query
-   
+
    let query = 'love'
    Search(query).then(async(data) => {console.log(data)})
-   
+
    /*
     Example
     output :
@@ -47,16 +48,16 @@ Simply
     ]
    */
 
-   // Get all list  
-   
+   // Get all list
+
    let page = 1
    let type = "hentai"
-   
+
    ListAll(page, type).then(async(data) => {console.log(data)})
-   
+
    /*
-    example 
-    output : 
+    example
+    output :
     [
       {
         id: 159,
@@ -68,11 +69,11 @@ Simply
       ....
     ]
    */
-   
+
    // Get latest/recent hentai
-   
+
    GetRecent().then(async(data) => {console.log(data)})
-   
+
    /*
     Example
     output :
@@ -86,11 +87,11 @@ Simply
       ....
     ]
    */
-   
+
    // Get series by id from recent
-   
+
    GetSeries(21910).then(async(data) => {console.log(data)})
-   
+
    /*
     Example
     output :
@@ -145,38 +146,38 @@ Simply
    }
 
    */
-   
+
    // Get post/episode by id from Search/Series result
-   
+
    GetPost(21911).then(async(data) => {console.log(data)})
-   
+
    /*
-   Example 
-   output : 
+   Example
+   output :
    {
       id: 21911,
       title: '...',
       content: '...',
       image: '...',
       stream: [
-        { 
+        {
           link: '...'
         }
       ],
      download: [
         {
-            type: '360p', 
-            links: [Array] 
+            type: '360p',
+            links: [Array]
         },
-        { 
-            type: '480p', 
-            links: [Array] 
+        {
+            type: '480p',
+            links: [Array]
         },
-        { 
+        {
             type: '720p',
-            links: [Array] 
+            links: [Array]
         },
-        { 
+        {
             type: '1080p',
             links: [Array]
         }
@@ -184,7 +185,7 @@ Simply
     }
     */
    ```
-   
+
 ## Contact
 
 David - [@david.stefen](https://instagram.com/david.stefen)

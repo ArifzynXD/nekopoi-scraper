@@ -9,6 +9,8 @@
 <h3 align="center">NekoPoi Scrapper</h3>
 </div>
 
+### Note
+  Our beloved nekopoi admin has change something so I change the code a bit
 ### How To Use
 
 1. Install Packages

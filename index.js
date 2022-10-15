@@ -4,14 +4,14 @@ const GetRecent = async() => {
     return new Promise(async(resolve, reject) => {
         let Data
         try {
-        await axios.get("https://api.itsrose.my.id/dewasa/nekopoi/latest").then((data) => {
-            Data = data
-        })
-        } catch (_error) {
-            resolve({
-                status: false,
-                message: "wkwk"
+            await axios.get("https://api.itsrose.my.id/dewasa/nekopoi/latest").then((data) => {
+                Data = data
+                Status = true
             })
+        } catch (_error) {
+            Status = false
+        } finally {
+            resolve(Data)
         }
     }
 }

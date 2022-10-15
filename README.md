@@ -22,18 +22,18 @@
 2. Example
     ```js
     const {
-      ListAll,
       GetRecent,
-      GetSeries,
-      GetPost,
-      Search
+      Search,
+      GetId
    } = require('nekopoi-scrapper')
 
 
    // Get Hentai by query
 
    let query = 'love'
-   Search(query).then(async(data) => {console.log(data)})
+   Search(query).then(async(data) => {
+        console.log(data)}
+   )
 
    /*
     Example
@@ -45,28 +45,6 @@
         title: 'SSNI-447 Erotic Love Slope Way Of View Sexual Desire Dada Leak Erotic Past Nuki Rolled Service 170 Minutes VIP Course',
         image: 'https://nekopoi.care/wp-content/uploads/2022/08/SSNI-447-Erotic-Love-Slope-Way-Of-View-Sexual-Desire-Dada-Leak-Erotic-Past-Nuki-Rolled-Service-170-Minutes-VIP-Course-Nekopoi-150x150.jpg',
         type: 'post'
-      },
-      ....
-    ]
-   */
-
-   // Get all list
-
-   let page = 1
-   let type = "hentai"
-
-   ListAll(page, type).then(async(data) => {console.log(data)})
-
-   /*
-    example
-    output :
-    [
-      {
-        id: 159,
-        date: 'July 14, 2016',
-        title: '3Ping Lovers!☆Ippu Nisai no Sekai e Youkoso♪ The Animation',
-        image: 'https://nekopoi.care/wp-content/uploads/2016/07/77440-150x150.jpg',
-        type: 'hentai'
       },
       ....
     ]
@@ -92,10 +70,12 @@
 
    // Get series by id from recent
 
-   GetSeries(21910).then(async(data) => {console.log(data)})
+   GetId(21910).then(async(data) => {
+      console.log(data)
+   })
 
    /*
-    Example
+    Example if ID not episode
     output :
     {
       id: 21910,
@@ -147,14 +127,7 @@
       ]
    }
 
-   */
-
-   // Get post/episode by id from Search/Series result
-
-   GetPost(21911).then(async(data) => {console.log(data)})
-
-   /*
-   Example
+   Example if ID is episode
    output :
    {
       id: 21911,

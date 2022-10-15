@@ -6,7 +6,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">NekoPoi Scrapper</h3>
+<h3 align="center">NekoPoi Scraper API</h3>
 </div>
 
 ### Note

@@ -23,11 +23,12 @@
    ```
 2. Example
     ```js
+    const nekopoi = require('./index.js')
     const {
       GetRecent,
       Search,
       GetId
-   } = require('nekopoi-scrapper')
+    } = new nekopoi()
 
 
    // Get Hentai by query

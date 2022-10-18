@@ -1,8 +1,9 @@
+const nekopoi = require('./index.js')
 const {
   GetRecent,
   Search,
   GetId
-} = require('./original/nekopoi.js')
+} = new nekopoi()
 
 GetId(22189).then(async(data) => {console.log(data)})
 

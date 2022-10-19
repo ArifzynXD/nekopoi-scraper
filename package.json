@@ -1,6 +1,6 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "Simple nekopoi scraper",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "url": "https://github.com/xct007/nekopoi-scrapper.git"
   },
   "keywords": ["nekopoi", "lightweight","scraper", "api", "hentong"],
-  "author": "david",
-  "license": "ISC",
+  "author": "FrierenDv",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xct007/nekopoi-scrapper/issues"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "nekopoi-scraper",
+  "name": "@xct007/nekopoi-scraper",
   "version": "2.4.0",
   "description": "Simple nekopoi scraper",
   "type": "module",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xct007/nekopoi-scrapper.git"
+    "url": "git+https://github.com/xct007/nekopoi-scrapper.git"
   },
   "keywords": [
     "nekopoi",
@@ -30,8 +30,12 @@
   "bugs": {
     "url": "https://github.com/xct007/nekopoi-scrapper/issues"
   },
+  "publishConfig": {
+    "@xct007:registry": "https://npm.pkg.github.com"
+  },
   "homepage": "https://github.com/xct007/nekopoi-scrapper",
   "dependencies": {
     "axios": "^0.27.2"
-  }
+  },
+  "devDependencies": {}
 }

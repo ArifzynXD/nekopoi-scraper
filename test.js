@@ -1,4 +1,4 @@
-import nekopoi from "./dist/esm/index.mjs";
+const nekopoi = require('./dist/commonjs/index.cjs');
 const { GetRecent, Search, GetId } = new nekopoi();
 
 GetId(23239).then(async (data) => {

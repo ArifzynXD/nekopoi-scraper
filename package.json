@@ -1,15 +1,14 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Simple nekopoi scraper",
-  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/esm/index.mjs",
-      "require": "./dist/commonjs/index.js"
+      "require": "./dist/commonjs/index.cjs"
     }
   },
-  "main": "./dist/commonjs/index.js",
+  "main": "./dist/commonjs/index.cjs",
   "types": "./dist/esm/index.mjs",
   "scripts": {
     "test": "exit 0"

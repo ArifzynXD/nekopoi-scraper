@@ -8,11 +8,15 @@
   </a>
 
 <h3 align="center">NekoPoi Scraper API</h3>
+<a href="https://badge.fury.io/js/nekopoi-scraper"><img src="https://badge.fury.io/js/nekopoi-scraper.svg" alt="npm version" height="20"></a>
 </div>
 
 ### Note
 
-Our beloved nekopoi admin has change something so I change the code a bit
+Our beloved nekopoi admin has change something so I change the code a bit.
+<details><summary><b>Click here</b></summary>
+<strong>✓ Remove obfuscate</strong>
+</details>
 
 ### How To Use
 
@@ -37,7 +41,8 @@ Our beloved nekopoi admin has change something so I change the code a bit
     import nekopoi from "nekopoi-scraper";
     const { GetRecent, Search, GetId } = new nekopoi();
     ```
-- Get hentai by query
+- <details><summary><b>Get hentai by query</b></summary>
+  
   ```js
   import nekopoi from "nekopoi-scraper";
   const { Search } = new nekopoi();
@@ -60,7 +65,9 @@ Our beloved nekopoi admin has change something so I change the code a bit
       ....
     ]
     ```
-- Get latest/recent hentai
+</details>
+
+- <details><summary><b>Get latest/recent hentai</b></summary>
 
   ```js
   import nekopoi from "nekopoi-scraper";
@@ -83,8 +90,9 @@ Our beloved nekopoi admin has change something so I change the code a bit
         ....
       ]
     ```
+</details>
 
-- Get detail by id
+- <details><summary><b>Get hentai detail by id</b></summary>
 
   ```js
   import nekopoi from "nekopoi-scraper";
@@ -147,31 +155,36 @@ Our beloved nekopoi admin has change something so I change the code a bit
       ]
     }
     ```
-  - Output if id is episode
+  - Output if ***id*** is episode
     ```js
-      id: 23239,
-      title: "[JAV SUB INDO] HAVD-875 The Hips That Won't Stop Even Though She Loves Her Husband. The Young Wife Who Is Addicted To The Big Cocks Of The Brothers Next Door",
-      content: '<strong>Movie ID : </strong>HAVD-875\r\n' +
-        '\r\n' +
-        '<strong>Producers :</strong> HIBINO\r\n' +
-        '\r\n' +
-        '<strong>Artist :</strong> Kudou Misa\r\n' +
-        '\r\n' +
-        '<strong>Genre :</strong> Creampie, Solowork, Big Tits, NTR, MILF\r\n' +
-        '\r\n' +
-        '<strong>Duration :</strong> 125 menit\r\n' +
-        '\r\n' +
-        '<strong>Size : 360P :</strong> 324mb <strong>|   480P :</strong> 461mb <strong>|   720P :</strong> 921mb\r\n' +
-        '<h3 data-blogger-escaped-style="clear: both; text-align: left;">Catatan: Silakan Download Melalui  "<span style="color: #7641ab;">DROP</span>" JIKA INGIN <span style="color: #339966;">AKSES MUDAH</span> <span style="color: #ff6600;">TANPA PERLU MELEWATI/MELALUI IKLAN</span></h3>',
-      image: 'https://nekopoi.care/wp-content/uploads/2022/07/1havd875pl.jpg',
-      stream: [ { link: 'https://dood.pm/xxxx' } ],
-      download: [
-        { type: '360p', links: [Array] },
-        { type: '480p', links: [Array] },
-        { type: '720p', links: [Array] }
+    {
+      [
+        id: 23239,
+        title: "[JAV SUB INDO] HAVD-875 The Hips That Won't Stop Even Though She Loves Her Husband. The Young Wife Who Is Addicted To The Big Cocks Of The Brothers Next Door",
+        content: '<strong>Movie ID : </strong>HAVD-875\r\n' +
+          '\r\n' +
+          '<strong>Producers :</strong> HIBINO\r\n' +
+          '\r\n' +
+          '<strong>Artist :</strong> Kudou Misa\r\n' +
+          '\r\n' +
+          '<strong>Genre :</strong> Creampie, Solowork, Big Tits, NTR, MILF\r\n' +
+          '\r\n' +
+          '<strong>Duration :</strong> 125 menit\r\n' +
+          '\r\n' +
+          '<strong>Size : 360P :</strong> 324mb <strong>|   480P :</strong> 461mb <strong>|   720P :</strong> 921mb\r\n' +
+          '<h3 data-blogger-escaped-style="clear: both; text-align: left;">Catatan: Silakan Download Melalui  "<span style="color: #7641ab;">DROP</span>" JIKA INGIN <span style="color: #339966;">AKSES MUDAH</span> <span style="color: #ff6600;">TANPA PERLU MELEWATI/MELALUI IKLAN</span></h3>',
+        image: 'https://nekopoi.care/wp-content/uploads/2022/07/1havd875pl.jpg',
+        stream: [ { link: 'https://dood.pm/xxxx' } ],
+        download: [
+          { type: '360p', links: [Array] },
+          { type: '480p', links: [Array] },
+          { type: '720p', links: [Array] }
+        ]
       ]
     }
     ```
+</details>
+
 
 ## Contact
 

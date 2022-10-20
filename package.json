@@ -1,5 +1,5 @@
 {
-  "name": "@xct007/nekopoi-scraper",
+  "name": "nekopoi-scraper",
   "version": "2.4.0",
   "description": "Simple nekopoi scraper",
   "type": "module",

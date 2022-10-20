@@ -9,6 +9,8 @@
 
 <h3 align="center">NekoPoi Scraper API</h3>
 <a href="https://badge.fury.io/js/nekopoi-scraper"><img src="https://badge.fury.io/js/nekopoi-scraper.svg" alt="npm version" height="20"></a>
+<img alt="npm" src="https://img.shields.io/npm/dw/nekopoi-scraper">
+<a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper&countColor=%232ccce4&style=flat" /></a>
 </div>
 
 ### Note

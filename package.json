@@ -30,9 +30,6 @@
   "bugs": {
     "url": "https://github.com/xct007/nekopoi-scrapper/issues"
   },
-  "publishConfig": {
-    "@xct007:registry": "https://npm.pkg.github.com"
-  },
   "homepage": "https://github.com/xct007/nekopoi-scrapper",
   "dependencies": {
     "axios": "^0.27.2"

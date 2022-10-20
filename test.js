@@ -1,14 +1,14 @@
-const nekopoi = require("./index.js");
+import nekopoi from "./dist/esm/index.mjs";
 const { GetRecent, Search, GetId } = new nekopoi();
 
-GetId(22189).then(async (data) => {
-  console.log(data);
+GetId(23239).then(async (data) => {
+  data ? console.log(data) : console.log('function GetId')
 });
-
 GetRecent().then(async (data) => {
-  console.log(data);
+  data ? console.log(data[0]) : console.log('function GetRecent')
 });
 
-Search("love").then(async (data) => {
-  console.log(data);
+let limit = 5
+Search("love", limit).then(async (data) => {
+  data ? console.log(data[1]) : console.log('function Search')
 });

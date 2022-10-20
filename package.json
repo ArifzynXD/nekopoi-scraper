@@ -2,7 +2,15 @@
   "name": "nekopoi-scraper",
   "version": "2.2.0",
   "description": "Simple nekopoi scraper",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/commonjs/index.js"
+    }
+  },
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/esm/index.mjs",
   "scripts": {
     "test": "node test.js"
   },
@@ -10,7 +18,13 @@
     "type": "git",
     "url": "https://github.com/xct007/nekopoi-scrapper.git"
   },
-  "keywords": ["nekopoi", "lightweight","scraper", "api", "hentong"],
+  "keywords": [
+    "nekopoi",
+    "lightweight",
+    "scraper",
+    "api",
+    "hentong"
+  ],
   "author": "FrierenDv",
   "license": "MIT",
   "bugs": {

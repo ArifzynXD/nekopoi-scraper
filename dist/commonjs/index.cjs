@@ -3,7 +3,7 @@
  * Fauzi anj
  *
  **/
-
+const { GetId } = require("./utils/util.cjs");
 const axios = require("axios");
 
 class nekopoi {
@@ -122,17 +122,13 @@ class nekopoi {
   }
   GetId(Id) {
     return new Promise((resolve, reject) => {
-      let scheme = "https" + "://" + "api" + ".itsrose" + ".my.id/";
-      axios
-        .get(scheme + "dewasa/nekopoi/detail?id=" + Id)
-        .then(({ data }) => {
-          resolve(data.result);
+      GetId(Id)
+        .then((data) => {
+          resolve(data);
         })
-        .catch((er) => {
-          resolve({
-            status: false,
-            message: "wkwk",
-          });
+        .catch((e) => {
+          reject;
+          console.log("error : ", e);
         });
     });
   }

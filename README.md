@@ -8,7 +8,6 @@
   </a>
 
 <h3 align="center">NekoPoi Scraper API</h3>
-<a href="https://badge.fury.io/js/nekopoi-scraper"><img src="https://badge.fury.io/js/nekopoi-scraper.svg" alt="npm version" height="18"></a>
 <img alt="npm" src="https://img.shields.io/npm/dw/nekopoi-scraper">
 <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper&countColor=%232ccce4&style=flat" /></a>
 </div>
@@ -50,11 +49,12 @@ Our beloved nekopoi admin has change something so I change the code a bit.
     import nekopoi from "nekopoi-scraper";
     const { Search } = new nekopoi();
 
-    let query = "love";
-    Search(query).then(async (data) => {
-    console.log(data);
-    });
-    ```
+  let query = "love";
+  Search(query).then(async (data) => {
+  console.log(data);
+  });
+
+  ````
   - Output
   ```js
   [
@@ -67,7 +67,7 @@ Our beloved nekopoi admin has change something so I change the code a bit.
     },
     ...
   ]
-  ```
+  ````
 
   </details>
 
@@ -110,6 +110,7 @@ Our beloved nekopoi admin has change something so I change the code a bit.
   ```
 
   - Output
+
   ```js
   {
     "id": 21910,
@@ -148,22 +149,23 @@ Our beloved nekopoi admin has change something so I change the code a bit.
     ]
   }
   ```
+
   - Output if **id** is episode
 
   ```js
   {
-  "id": 23239,
-  "title":
-    "[JAV SUB INDO] HAVD-875 The Hips That Won't Stop Even Though She Loves Her Husband. The Young Wife Who Is Addicted To The Big Cocks Of The Brothers Next Door",
-  "content":
-    "...",
-  "image": "https://nekopoi.care/wp-content/uploads/2022/07/1havd875pl.jpg",
-  "stream": [{ "link": "https://dood.pm/xxxx" }],
-  "download": [
-    { "type": "360p", "links": [Array] },
-    { "type": "480p", "links": [Array] },
-    { "type": "720p", "links": [Array] },
-  ],
+    "id": 23239,
+    "title":
+      "[JAV SUB INDO] HAVD-875 The Hips That Won't Stop Even Though She Loves Her Husband. The Young Wife Who Is Addicted To The Big Cocks Of The Brothers Next Door",
+    "content":
+      "...",
+    "image": "https://nekopoi.care/wp-content/uploads/2022/07/1havd875pl.jpg",
+    "stream": [{ "link": "https://dood.pm/xxxx" }],
+    "download": [
+      { "type": "360p", "links": [Array] },
+      { "type": "480p", "links": [Array] },
+      { "type": "720p", "links": [Array] },
+    ],
   }
   ```
 
@@ -175,8 +177,8 @@ Our beloved nekopoi admin has change something so I change the code a bit.
   import nekopoi from "nekopoi-scraper";
   const { ListAll } = new nekopoi();
 
-  let page = 1
-  let type = ["jav", "hentai"]
+  let page = 1;
+  let type = ["jav", "hentai"];
   ListAll(page, type[0]).then(async (data) => {
     console.log(data);
   });

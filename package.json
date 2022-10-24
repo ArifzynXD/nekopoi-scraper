@@ -1,6 +1,6 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Simple nekopoi scraper",
   "exports": {
     ".": {

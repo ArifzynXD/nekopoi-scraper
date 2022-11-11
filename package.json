@@ -11,12 +11,7 @@
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.js",
   "scripts": {
-    "postinstall": "npm run build && npm run clean:src",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:cjs": "tsc -P tsconfig.cjs.json",
-    "build:esm": "tsc -P tsconfig.json",
-    "clean": "rm -rf dist",
-    "clean:src": "rm -rf src"
+    "build": "rm -rf dist && tsc -P tsconfig.json && tsc -P tsconfig.cjs.json",
   },
   "repository": {
     "type": "git",

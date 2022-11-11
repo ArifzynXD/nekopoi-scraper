@@ -1,2 +1,4 @@
 node_modules
-original
+./test.js
+_dist
+dist

@@ -14,10 +14,10 @@
 
 ### Note
 
-Our beloved nekopoi admin has change something so I change the code a bit.
+Our beloved nekopoi admin has change something *AGAIN* so I change the code a bit.
 
 <details><summary><b>Click here</b></summary>
-<strong>✓ Remove obfuscate</strong>
+<strong>✓ star reponya konto*</strong>
 </details>
 
 ### How To Use
@@ -35,19 +35,16 @@ Our beloved nekopoi admin has change something so I change the code a bit.
 - Import packages
   - cjs
     ```js
-    const nekopoi = require("nekopoi-scraper");
-    const { GetRecent, Search, GetId } = new nekopoi();
+    const { Search, getRecent, list, getId } = require("nekopoi-scraper");
     ```
   - ESM
     ```js
-    import nekopoi from "nekopoi-scraper";
-    const { GetRecent, Search, GetId, ListAll } = new nekopoi();
+    import { Search, getRecent, list, getId } from 'nekopoi-scraper'
     ```
 - <details><summary><b>Get hentai by query</b></summary>
     
     ```js
-    import nekopoi from "nekopoi-scraper";
-    const { Search } = new nekopoi();
+    import { Search } from "nekopoi-scraper";
 
   let query = "love";
   Search(query).then(async (data) => {
@@ -74,10 +71,9 @@ Our beloved nekopoi admin has change something so I change the code a bit.
 - <details><summary><b>Get latest/recent hentai</b></summary>
 
   ```js
-  import nekopoi from "nekopoi-scraper";
-  const { GetRecent } = new nekopoi();
+  import { getRecent } from "nekopoi-scraper";
 
-  GetRecent().then(async (data) => {
+  getRecent().then(async (data) => {
     console.log(data);
   });
   ```
@@ -101,10 +97,9 @@ Our beloved nekopoi admin has change something so I change the code a bit.
 - <details><summary><b>Get hentai detail by id</b></summary>
 
   ```js
-  import nekopoi from "nekopoi-scraper";
-  const { GetId } = new nekopoi();
+  import { getId } from "nekopoi-scraper";
 
-  GetId(21910).then(async (data) => {
+  getId(21910).then(async (data) => {
     console.log(data);
   });
   ```
@@ -174,12 +169,11 @@ Our beloved nekopoi admin has change something so I change the code a bit.
 - <details><summary><b>Get List all hentai</b></summary>
 
   ```js
-  import nekopoi from "nekopoi-scraper";
-  const { ListAll } = new nekopoi();
+  import { list } from "nekopoi-scraper";
 
   let page = 1;
   let type = ["jav", "hentai"];
-  ListAll(page, type[0]).then(async (data) => {
+  list(page, type[0]).then(async (data) => {
     console.log(data);
   });
   ```

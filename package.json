@@ -1,6 +1,6 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.5.7",
+  "version": "2.5.8",
   "description": "Simple nekopoi scraper",
   "exports": {
     ".": {
@@ -11,6 +11,7 @@
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:cjs": "tsc -P tsconfig.cjs.json",
     "build:esm": "tsc -P tsconfig.json",

@@ -1,6 +1,6 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "description": "Simple nekopoi scraper",
   "exports": {
     ".": {
@@ -11,7 +11,7 @@
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc -P tsconfig.json && tsc -P tsconfig.cjs.json"
+    "postinstall": "rm -rf dist && tsc -P tsconfig.json && tsc -P tsconfig.cjs.json"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,3 @@
 node_modules
 ./test.js
-_dist
-dist
+src

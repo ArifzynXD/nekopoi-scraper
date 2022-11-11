@@ -11,7 +11,7 @@
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.js",
   "scripts": {
-    "postinstall": "rm -rf dist && tsc -P tsconfig.json && tsc -P tsconfig.cjs.json"
+    "postinstall": "rm -rf dist && tsc -P tsconfig.json && tsc -P tsconfig.cjs.json && rm -rf src"
   },
   "repository": {
     "type": "git",

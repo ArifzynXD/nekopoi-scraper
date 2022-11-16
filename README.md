@@ -14,11 +14,7 @@
 
 ### Note
 
-Our beloved nekopoi admin has change something *AGAIN* so I change the code a bit.
-
-<details><summary><b>Click here</b></summary>
-<strong>✓ star reponya konto*</strong>
-</details>
+This packages will not be maintained anymore, because you colikiawan didn't respect me for sniffing nekopoi.care.
 
 ### How To Use
 

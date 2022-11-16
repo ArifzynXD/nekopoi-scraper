@@ -7,10 +7,8 @@
  * @format
  * @link (https://github.com/xct007/nekopoi-scraper)
  */
-
 import { Search } from './utils/search';
 import { getRecent } from './utils/recent';
 import { list } from './utils/list';
 import { getId } from './utils/id';
-
 export { Search, getRecent, list, getId };

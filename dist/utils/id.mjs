@@ -1,6 +1,2 @@
-import {
-  getId
-} from "../chunk-ZWLRNUII.mjs";
-export {
-  getId
-};
+import { getId } from "../chunk-4L3BBUEM.mjs";
+export { getId };

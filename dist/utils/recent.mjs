@@ -1,6 +1,2 @@
-import {
-  getRecent
-} from "../chunk-FLBP5DCX.mjs";
-export {
-  getRecent
-};
+import { getRecent } from "../chunk-YZFIHIHV.mjs";
+export { getRecent };

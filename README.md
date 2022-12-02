@@ -44,7 +44,7 @@ This packages will not be maintained anymore, because you colikiawan didn't resp
 
   let query = "love";
   Search(query).then(async (data) => {
-  console.log(data);
+    console.log(data);
   });
 
   ````

@@ -1,6 +1,6 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.6.6",
+  "version": "2.6.7",
   "description": "Simple nekopoi scraper",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -11,7 +11,7 @@
     }
   },
   "scripts": {
-    "test": "echo 'Star Reponya kontol' && exit 0"
+    "postinstall": "echo 'Star Reponya kontol'"
   },
   "repository": {
     "type": "git",

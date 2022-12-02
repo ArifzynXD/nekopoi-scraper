@@ -1,6 +1,2 @@
-import {
-  list
-} from "../chunk-KV3YKRGC.mjs";
-export {
-  list
-};
+import { list } from "../chunk-X6UFIONL.mjs";
+export { list };

@@ -1,6 +1,2 @@
-import {
-  Search
-} from "../chunk-7JLY7GVI.mjs";
-export {
-  Search
-};
+import { Search } from "../chunk-EC2QDLHV.mjs";
+export { Search };

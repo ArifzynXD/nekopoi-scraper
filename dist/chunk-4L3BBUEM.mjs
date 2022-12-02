@@ -1,49 +1,11 @@
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-	for (var name in all)
-		__defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-	if ((from && typeof from === "object") || typeof from === "function") {
-		for (let key of __getOwnPropNames(from))
-			if (!__hasOwnProp.call(to, key) && key !== except)
-				__defProp(to, key, {
-					get: () => from[key],
-					enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-				});
-	}
-	return to;
-};
-var __toESM = (mod, isNodeMode, target) => (
-	(target = mod != null ? __create(__getProtoOf(mod)) : {}),
-	__copyProps(
-		isNodeMode || !mod || !mod.__esModule
-			? __defProp(target, "default", { value: mod, enumerable: true })
-			: target,
-		mod
-	)
-);
-var __toCommonJS = (mod) =>
-	__copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
 // src/utils/id.ts
-var id_exports = {};
-__export(id_exports, {
-	getId: () => getId,
-});
-module.exports = __toCommonJS(id_exports);
-var import_axios = __toESM(require("axios"));
+import axios from "axios";
 async function GetPost(id) {
 	return new Promise(async (res, rej) => {
 		let Data;
 		const scheme = "https://api.usamin.cc/";
 		try {
-			await import_axios.default
+			await axios
 				.request({
 					url:
 						scheme +
@@ -82,7 +44,7 @@ async function GetSeries(id) {
 		let Data;
 		const scheme = "https://api.usamin.cc/";
 		try {
-			await import_axios.default
+			await axios
 				.request({
 					url:
 						scheme +
@@ -129,8 +91,5 @@ async function getId(id) {
 		}
 	});
 }
-// Annotate the CommonJS export names for ESM import in node:
-0 &&
-	(module.exports = {
-		getId,
-	});
+
+export { getId };

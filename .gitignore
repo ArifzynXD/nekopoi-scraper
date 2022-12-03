@@ -2,3 +2,4 @@ node_modules
 ./test.js
 trash
 src/
+tsconfig*.json

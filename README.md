@@ -14,7 +14,7 @@
 
 ### Note
 
-This packages will not be maintained anymore, because you colikiawan didn't respect me for sniffing nekopoi.care.
+Try it
 
 ### How To Use
 
@@ -42,7 +42,7 @@ This packages will not be maintained anymore, because you colikiawan didn't resp
     ```js
     import { Search } from "nekopoi-scraper";
 
-  let query = "love";
+  const query = "love";
   Search(query).then(async (data) => {
     console.log(data);
   });
@@ -167,8 +167,8 @@ This packages will not be maintained anymore, because you colikiawan didn't resp
   ```js
   import { list } from "nekopoi-scraper";
 
-  let page = 1;
-  let type = ["jav", "hentai"];
+  const page = 1;
+  const type = ["jav", "hentai"];
   list(page, type[0]).then(async (data) => {
     console.log(data);
   });

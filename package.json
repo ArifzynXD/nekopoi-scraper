@@ -1,6 +1,6 @@
 {
   "name": "nekopoi-scraper",
-  "version": "2.6.7a",
+  "version": "2.6.7-b",
   "description": "Simple nekopoi scraper",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",

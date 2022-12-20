@@ -1,26 +1,20 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.detail = exports.getId = exports.search = exports.Search = exports.list = exports.latest = exports.getRecent = void 0;
 /**
  * @warning
  * @author FrierenDv
  * @version 2.6.8
  * @see @link https://github.com/xct007/nekopoi-scraper
  */
-const axios_1 = __importDefault(require("axios"));
-const Config_js_1 = require("./Config.js");
+import axios from "axios";
+import { Config, URL_RECENT, URL_LIST, URL_SEARCH, URL_POST, URL_SERIES, } from "./Config.js";
 /**
  * Get recent hentai
  * @returns {Promise<Object>}
  */
-const getRecent = async () => {
+export const getRecent = async () => {
     let result = [];
-    const data = await axios_1.default
-        .get(Config_js_1.URL_RECENT, {
-        ...Config_js_1.Config,
+    const data = await axios
+        .get(URL_RECENT, {
+        ...Config,
     })
         .catch((e) => {
         return e.response;
@@ -41,19 +35,18 @@ const getRecent = async () => {
     }
     return result;
 };
-exports.getRecent = getRecent;
-exports.latest = exports.getRecent;
+export { getRecent as latest };
 /**
  * Get all list ** by type.
  * @param {String} tipe (optional), eg. "jav" or "hentai", default "hentai".
  * @param {String|Number} page (optional), eg. 2 or idk it can be return error maybe.
  * @returns {Promise<Object>}
  */
-const list = async (tipe, page) => {
+export const list = async (tipe, page) => {
     let result = [];
-    const data = await axios_1.default
-        .get((0, Config_js_1.URL_LIST)(tipe ? tipe : "hentai", page ? page : 1), {
-        ...Config_js_1.Config,
+    const data = await axios
+        .get(URL_LIST(tipe ? tipe : "hentai", page ? page : 1), {
+        ...Config,
     })
         .catch((e) => {
         return e.response;
@@ -73,18 +66,17 @@ const list = async (tipe, page) => {
     }
     return result;
 };
-exports.list = list;
 /**
  * get hentai by query.
  * @param {String} query
  * @param {Number} limit (optional), for number of output, eg. 10
  * @returns {Promise<Object>}
  */
-const Search = async (query, limit) => {
+export const Search = async (query, limit) => {
     let result = [];
-    const data = await axios_1.default
-        .get((0, Config_js_1.URL_SEARCH)(query), {
-        ...Config_js_1.Config,
+    const data = await axios
+        .get(URL_SEARCH(query), {
+        ...Config,
     })
         .catch((e) => {
         return e.response;
@@ -105,18 +97,17 @@ const Search = async (query, limit) => {
     }
     return result;
 };
-exports.Search = Search;
-exports.search = exports.Search;
+export { Search as search };
 /**
  * get hentai detail by id
  * @param {Number} id
  * @returns {Promise<Object>}
  */
-const getId = async (id) => {
+export const getId = async (id) => {
     let result;
-    let data = await axios_1.default
-        .get((0, Config_js_1.URL_SERIES)(id), {
-        ...Config_js_1.Config,
+    let data = await axios
+        .get(URL_SERIES(id), {
+        ...Config,
     })
         .catch((e) => {
         return e.response;
@@ -137,9 +128,9 @@ const getId = async (id) => {
         result = temp;
     }
     else {
-        data = await axios_1.default
-            .get((0, Config_js_1.URL_POST)(id), {
-            ...Config_js_1.Config,
+        data = await axios
+            .get(URL_POST(id), {
+            ...Config,
         })
             .catch((e) => {
             return e.response;
@@ -160,17 +151,16 @@ const getId = async (id) => {
     }
     return result;
 };
-exports.getId = getId;
-exports.detail = exports.getId;
+export { getId as detail };
 const nekopoi = {
-    search: exports.Search,
-    latest: exports.getRecent,
-    list: exports.list,
-    detail: exports.getId,
-    Search: exports.Search,
-    getRecent: exports.getRecent,
-    getId: exports.getId
+    search: Search,
+    latest: getRecent,
+    list,
+    detail: getId,
+    Search,
+    getRecent,
+    getId
 };
-exports.default = nekopoi;
+export default nekopoi;
 /** @encode */
 //# sourceMappingURL=index.js.map

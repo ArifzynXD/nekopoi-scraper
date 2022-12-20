@@ -12,10 +12,6 @@
 <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper&countColor=%232ccce4&style=flat" /></a>
 </div>
 
-### Note
-
-Try it
-
 ### How To Use
 
 1. Install Packages
@@ -29,13 +25,14 @@ Try it
 2. Example
 
 - Import packages
-  - cjs
+  - `CommonJS`
     ```js
     const { Search, getRecent, list, getId } = require("nekopoi-scraper");
+    // or
     ```
-  - ESM
+  - `ESM`
     ```js
-    import { Search, getRecent, list, getId } from 'nekopoi-scraper'
+    import { Search, getRecent, list, getId } from "nekopoi-scraper";
     ```
 - <details><summary><b>Get hentai by query</b></summary>
     
@@ -43,8 +40,9 @@ Try it
     import { Search } from "nekopoi-scraper";
 
   const query = "love";
-  Search(query).then(async (data) => {
-    console.log(data);
+  const limit = 10; // limit output. default 10
+  Search(query, limit).then(async (data) => {
+  console.log(data);
   });
 
   ````
@@ -52,11 +50,11 @@ Try it
   ```js
   [
     {
-      "id": 23916,
-      "date": "August 30, 2022",
-      "title": "SSNI-447 Erotic Love Slope Way Of View Sexual Desire Dada Leak Erotic Past Nuki Rolled Service 170 Minutes VIP Course",
-      "image": "https://nekopoi.care/wp-content/uploads/2022/08/SSNI-447-Erotic-Love-Slope-Way-Of-View-Sexual-Desire-Dada-Leak-Erotic-Past-Nuki-Rolled-Service-170-Minutes-VIP-Course-Nekopoi-150x150.jpg",
-      "type": "post"
+      "id": Number,
+      "date": String,
+      "title":String,
+      "image": String,
+      "type": String,
     },
     ...
   ]
@@ -79,13 +77,12 @@ Try it
   ```js
   [
     {
-      "id": 21910,
-      "title": "Ero Ishi: Seijun Bishoujo wo Kotoba Takumi ni Hametai Houdai",
-      "image": "https://nekopoi.care/wp-content/uploads/2022/01/Ero-Ishi1.jpg",
-      "description": "Menceritakan dokter kelamin yang sekaligus juga penjahat kelamin yang membodoh-bodohi cewek SMA."
+      id: Number,
+      title: String,
+      image: String,
+      description: String,
     },
-    ...
-  ]
+  ];
   ```
 
   </details>
@@ -104,37 +101,27 @@ Try it
 
   ```js
   {
-    "id": 21910,
-    "date": "2022-09-01 00:00:40",
-    "title": "Ero Ishi: Seijun Bishoujo wo Kotoba Takumi ni Hametai Houdai",
-    "description": "Menceritakan dokter kelamin yang sekaligus juga penjahat kelamin yang membodoh-bodohi cewek SMA.",
-    "image": "https://nekopoi.care/wp-content/uploads/2022/01/Ero-Ishi1-150x150.jpg",
+    "id": Number,
+    "date": String,
+    "title": String,
+    "description": String,
+    "image": String,
     "info_meta": {
-      "aliases": "エロ医師 ~清純美少女を言葉巧みにハメたい放題~",
-      "episode": "4",
-      "status": "Completed",
-      "tayang": "Jan 28, 2022",
-      "produser": "PoRO",
-      "genre": [
-        [Object],
-        [Object],
-        [Object],
-        [Object],
-        [Object],
-        [Object],
-        [Object],
-        [Object],
-        [Object]
-      ],
-      "durasi": "21 min",
-      "skor": "6.89"
+      "aliases": String,
+      "episode": String,
+      "status": String,
+      "tayang": String,
+      "produser": String,
+      "genre": String,
+      "durasi": String,
+      "skor": String,
     },
     "episode": [
       {
-        "id": 21911,
-        "date": "February 1, 2022",
-        "title": "Ero Ishi: Seijun Bishoujo wo Kotoba Takumi ni Hametai Houdai Episode 1 Subtitle Indonesia",
-        "image": "https://nekopoi.care/wp-content/uploads/2022/01/vlcsnap-2022-01-31-23h52m28s333-150x150.png"
+        "id": Number,
+        "date": String,
+        "title": String,
+        "image": String,
       },
       ...
     ]
@@ -145,17 +132,31 @@ Try it
 
   ```js
   {
-    "id": 23239,
-    "title":
-      "[JAV SUB INDO] HAVD-875 The Hips That Won't Stop Even Though She Loves Her Husband. The Young Wife Who Is Addicted To The Big Cocks Of The Brothers Next Door",
-    "content":
-      "...",
-    "image": "https://nekopoi.care/wp-content/uploads/2022/07/1havd875pl.jpg",
-    "stream": [{ "link": "https://dood.pm/xxxx" }],
+    "id":Number,
+    "title": String,
+    "image": String,
+    "series": {
+      "id": Number,
+      "title": String,
+      "content": String,
+      "image": String,
+      "genre": String,
+    }
+    "stream": [
+      {
+        "link": String
+      },
+      ...
+    ],
     "download": [
-      { "type": "360p", "links": [Array] },
-      { "type": "480p", "links": [Array] },
-      { "type": "720p", "links": [Array] },
+      {
+        "type": String,
+        "links": [
+           "name": String,
+           "link": String
+        ]
+      },
+      ...
     ],
   }
   ```
@@ -167,9 +168,9 @@ Try it
   ```js
   import { list } from "nekopoi-scraper";
 
-  const page = 1;
-  const type = ["jav", "hentai"];
-  list(page, type[0]).then(async (data) => {
+  const type = "jav"; // available "jav", "hentai"
+  const page = 1; // optional
+  list(type, page).then(async (data) => {
     console.log(data);
   });
   ```
@@ -179,16 +180,18 @@ Try it
   ```js
   [
     {
-      "id": 20908,
-      "date": "October 11, 2021",
-      "title": "362SCOH-047 [Creampie] Let a carefully selected beautiful girl cosplay and conceive my child [Tokisaki]",
-      "image": "https://nekopoi.care/wp-content/uploads/2021/10/93644-150x150.jpg",
-      "type": "post"
+      "id": Number,
+      "date": String,
+      "title": String,
+      "image": String,
+      "type":String,
     }
     ...
   ]
   ```
-
+## TODO
+- [x] Make code more readable
+- [ ] Etc.
 ## Contact
 
 David - [@david.stefen](https://instagram.com/david.stefen)

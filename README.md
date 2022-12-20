@@ -14,40 +14,55 @@
 
 ### How To Use
 
+## Basic
+
 1. Install Packages
    ```sh
    npm install nekopoi-scraper
    ```
-   or
+   or using `yarn`
    ```sh
    yarn add nekopoi-scraper
    ```
-2. Example
+2. Import packages
 
-- Import packages
-  - `CommonJS`
-    ```js
-    const { Search, getRecent, list, getId } = require("nekopoi-scraper");
-    // or
-    ```
-  - `ESM`
-    ```js
-    import { Search, getRecent, list, getId } from "nekopoi-scraper";
-    ```
-- <details><summary><b>Get hentai by query</b></summary>
-    
-    ```js
-    import { Search } from "nekopoi-scraper";
-
-  const query = "love";
-  const limit = 10; // limit output. default 10
-  Search(query, limit).then(async (data) => {
-  console.log(data);
-  });
-
-  ````
-  - Output
+- `CommonJS`
   ```js
+  /** Export name
+  search or Search
+  latest or getRecent
+  detail or getId
+  list
+   */
+  const { Search, getRecent, list, getId } = require("nekopoi-scraper");
+  ```
+- `ESM`
+  ```js
+  /** Export name
+  search or Search
+  latest or getRecent
+  detail or getId
+  list
+   */
+  import { Search, getRecent, list, getId } from "nekopoi-scraper";
+  ```
+
+## Example
+
+<details><summary><b>Get hentai by query</b></summary>
+    
+```js
+import { Search } from "nekopoi-scraper";
+
+const query = "love";
+const limit = 10; // limit output. default 10
+Search(query, limit).then(async (data) => {
+console.log(data);
+});
+
+````
+Output
+```js
   [
     {
       "id": Number,
@@ -58,48 +73,48 @@
     },
     ...
   ]
-  ````
+````
 
-  </details>
+</details>
 
-- <details><summary><b>Get latest/recent hentai</b></summary>
+<details><summary><b>Get latest/recent hentai</b></summary>
 
-  ```js
-  import { getRecent } from "nekopoi-scraper";
+```js
+import { getRecent } from "nekopoi-scraper";
 
-  getRecent().then(async (data) => {
-    console.log(data);
-  });
-  ```
+getRecent().then(async (data) => {
+  console.log(data);
+});
+```
 
-  - Output
+- Output
 
-  ```js
-  [
-    {
-      id: Number,
-      title: String,
-      image: String,
-      description: String,
-    },
-  ];
-  ```
+```js
+[
+  {
+    id: Number,
+    title: String,
+    image: String,
+    description: String,
+  },
+];
+```
 
-  </details>
+</details>
 
-- <details><summary><b>Get hentai detail by id</b></summary>
+<details><summary><b>Get hentai detail by id</b></summary>
 
-  ```js
-  import { getId } from "nekopoi-scraper";
+```js
+import { getId } from "nekopoi-scraper";
 
-  getId(21910).then(async (data) => {
-    console.log(data);
-  });
-  ```
+getId(21910).then(async (data) => {
+  console.log(data);
+});
+```
 
-  - Output
+- Output
 
-  ```js
+```js
   {
     "id": Number,
     "date": String,
@@ -126,11 +141,11 @@
       ...
     ]
   }
-  ```
+```
 
-  - Output if **id** is episode
+- Output if **id** is episode
 
-  ```js
+```js
   {
     "id":Number,
     "title": String,
@@ -159,25 +174,25 @@
       ...
     ],
   }
-  ```
+```
 
-  </details>
+</details>
 
-- <details><summary><b>Get List all hentai</b></summary>
+<details><summary><b>Get List all hentai</b></summary>
 
-  ```js
-  import { list } from "nekopoi-scraper";
+```js
+import { list } from "nekopoi-scraper";
 
-  const type = "jav"; // available "jav", "hentai"
-  const page = 1; // optional
-  list(type, page).then(async (data) => {
-    console.log(data);
-  });
-  ```
+const type = "jav"; // available "jav", "hentai"
+const page = 1; // optional
+list(type, page).then(async (data) => {
+  console.log(data);
+});
+```
 
-  - Output
+- Output
 
-  ```js
+```js
   [
     {
       "id": Number,
@@ -188,10 +203,15 @@
     }
     ...
   ]
-  ```
+```
+
+</details>
+
 ## TODO
+
 - [x] Make code more readable
 - [ ] Etc.
+
 ## Contact
 
 David - [@david.stefen](https://instagram.com/david.stefen)

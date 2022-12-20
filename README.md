@@ -9,7 +9,11 @@
 
 <h3 align="center">NekoPoi Scraper API</h3>
 <img alt="npm" src="https://img.shields.io/npm/dw/nekopoi-scraper">
-<a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper&countColor=%232ccce4&style=flat" /></a>
+<img alt="NPM" src="https://img.shields.io/npm/l/nekopoi-scraper">
+
+<a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper"></a>
+<img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fxct007%2Fnekopoi-scraper&countColor=%232ccce4&style=flat" />
+<img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/xct007/nekopoi-scraper/main">
 </div>
 
 ### How To Use

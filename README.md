@@ -4,7 +4,7 @@
 <h3 align="center">Simple</h3>
 <div align="center">
   <a href="#">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://static.zerochan.net/Frieren.full.3233127.jpg" alt="Logo">
   </a>
 
 <h3 align="center">NekoPoi Scraper API</h3>
@@ -17,9 +17,7 @@
 </div>
 
 ## Note:
-This package not working right now,
-it's look like our beloved kucing poi admin has changed their api domain :/
-should I scrape again?
+:/
 ### How To Use
 
 ## Basic
@@ -36,22 +34,10 @@ should I scrape again?
 
 - `CommonJS`
   ```js
-  /** Export name
-  search or Search
-  latest or getRecent
-  detail or getId
-  list
-   */
   const { Search, getRecent, list, getId } = require("nekopoi-scraper");
   ```
 - `ESM`
   ```js
-  /** Export name
-  search or Search
-  latest or getRecent
-  detail or getId
-  list
-   */
   import { Search, getRecent, list, getId } from "nekopoi-scraper";
   ```
 
@@ -105,6 +91,7 @@ getRecent().then(async (data) => {
     image: String,
     description: String,
   },
+  ...
 ];
 ```
 
@@ -218,7 +205,7 @@ list(type, page).then(async (data) => {
 ## TODO
 
 - [x] Make code more readable
-- [ ] Etc.
+- [x] Etc.
 
 ## Contact
 

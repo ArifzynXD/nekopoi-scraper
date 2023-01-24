@@ -16,6 +16,9 @@
 <img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/xct007/nekopoi-scraper/main">
 </div>
 
+## Note:
+This package not working right now,
+Should we scrape again?
 ### How To Use
 
 ## Basic

@@ -18,7 +18,8 @@
 
 ## Note:
 This package not working right now,
-Should we scrape again?
+it's look like our beloved kucing poi admin has changed their api domain :/
+should I scrape again?
 ### How To Use
 
 ## Basic

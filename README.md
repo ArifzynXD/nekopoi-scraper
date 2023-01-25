@@ -17,7 +17,7 @@
 </div>
 
 ## Note:
-Can you fill this [google form](https://forms.gle/rgPYdM1EHpPfPyy18)?
+`:/`
 ### How To Use
 
 ## Basic

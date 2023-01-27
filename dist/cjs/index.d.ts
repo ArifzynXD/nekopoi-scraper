@@ -1,40 +1,34 @@
 /**
  * Get recent hentai
- * @returns {Promise<Object>}
+ * @return {Promise<Object>}
  */
-export declare const getRecent: () => Promise<object>;
-export { getRecent as latest };
+export declare const latest: () => Promise<object>;
 /**
  * Get all list ** by type.
- * @param {String} tipe (optional), eg. "jav" or "hentai", default "hentai".
- * @param {String|Number} page (optional), eg. 2 or idk it can be return error maybe.
- * @returns {Promise<Object>}
+ * @param {String} _type (optional), eg. "jav" or "hentai", default "hentai".
+ * @param {Number} page (optional), eg. 2, default 1.
+ * @return {Promise<Object>}
  */
-export declare const list: (tipe?: string, page?: number | string) => Promise<object>;
+export declare const list: (_type?: string, page?: number) => Promise<object>;
 /**
  * get hentai by query.
  * @param {String} query
  * @param {Number} limit (optional), for number of output, eg. 10
- * @returns {Promise<Object>}
+ * @return {Promise<Object>}
  */
-export declare const Search: (query: string, limit?: number | string) => Promise<object>;
-export { Search as search };
+export declare const search: (query: string, limit?: number) => Promise<object>;
 /**
  * get hentai detail by id
  * @param {Number} id
- * @returns {Promise<Object>}
+ * @return {Promise<Object>}
  */
-export declare const getId: (id: number) => Promise<object>;
-export { getId as detail };
-declare const nekopoi: {
-    search: (query: string, limit?: number | string) => Promise<object>;
+export declare const detail: (id: number) => Promise<object>;
+declare const kucingPoi: {
+    search: (query: string, limit?: number) => Promise<object>;
     latest: () => Promise<object>;
-    list: (tipe?: string, page?: number | string) => Promise<object>;
+    list: (_type?: string, page?: number) => Promise<object>;
     detail: (id: number) => Promise<object>;
-    Search: (query: string, limit?: number | string) => Promise<object>;
-    getRecent: () => Promise<object>;
-    getId: (id: number) => Promise<object>;
 };
-export default nekopoi;
-/** @encode */
+export default kucingPoi;
+/** Hello :) */
 //# sourceMappingURL=index.d.ts.map

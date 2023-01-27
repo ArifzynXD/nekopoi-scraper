@@ -17,7 +17,7 @@
 </div>
 
 ## Note:
-`:/`
+`Dont forget to star the repo :)`
 ### How To Use
 
 ## Basic

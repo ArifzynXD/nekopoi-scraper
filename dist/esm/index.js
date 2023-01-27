@@ -1,24 +1,23 @@
 /**
- * @warning
  * @author FrierenDv
- * @version 2.6.8
- * @see @link https://github.com/xct007/nekopoi-scraper
+ * @version 2.6.9
+ *
+ * Don't forget to star the repo :)
+ * @link (https://github.com/xct007/nekopoi-scraper)
  */
 import axios from "axios";
-import { Config, URL_RECENT, URL_LIST, URL_SEARCH, URL_POST, URL_SERIES, } from "./Config.js";
+import { Config, URL_RECENT, URL_LIST, URL_SEARCH, URL_POST, URL_SERIES, } from "./Config";
 /**
  * Get recent hentai
- * @returns {Promise<Object>}
+ * @return {Promise<Object>}
  */
-export const getRecent = async () => {
+export const latest = async () => {
     let result = [];
     const data = await axios
         .get(URL_RECENT, {
         ...Config,
     })
-        .catch((e) => {
-        return e.response;
-    });
+        .catch((e) => e === null || e === void 0 ? void 0 : e.response);
     if (data.data && data.data.carousel) {
         for (const i of data.data.carousel) {
             delete i["slug"];
@@ -29,29 +28,26 @@ export const getRecent = async () => {
     }
     else {
         return {
-            status: false,
+            error: true,
             message: "failed to fetch data from {URL_RECENT}",
         };
     }
     return result;
 };
-export { getRecent as latest };
 /**
  * Get all list ** by type.
- * @param {String} tipe (optional), eg. "jav" or "hentai", default "hentai".
- * @param {String|Number} page (optional), eg. 2 or idk it can be return error maybe.
- * @returns {Promise<Object>}
+ * @param {String} _type (optional), eg. "jav" or "hentai", default "hentai".
+ * @param {Number} page (optional), eg. 2, default 1.
+ * @return {Promise<Object>}
  */
-export const list = async (tipe, page) => {
+export const list = async (_type, page) => {
     let result = [];
     const data = await axios
-        .get(URL_LIST(tipe ? tipe : "hentai", page ? page : 1), {
+        .get(URL_LIST(_type ? _type : "hentai", page ? page : 1), {
         ...Config,
     })
-        .catch((e) => {
-        return e.response;
-    });
-    if (data.data && data.data.result.length) {
+        .catch((e) => e === null || e === void 0 ? void 0 : e.response);
+    if (data.data && Array.isArray(data.data.result)) {
         for (const i of data.data.result) {
             result.push({
                 ...i,
@@ -60,8 +56,8 @@ export const list = async (tipe, page) => {
     }
     else {
         return {
-            status: false,
-            message: "failed to fetch data from {URL_LIST()}",
+            error: true,
+            message: "failed to fetch data from {URL_LIST}",
         };
     }
     return result;
@@ -70,51 +66,45 @@ export const list = async (tipe, page) => {
  * get hentai by query.
  * @param {String} query
  * @param {Number} limit (optional), for number of output, eg. 10
- * @returns {Promise<Object>}
+ * @return {Promise<Object>}
  */
-export const Search = async (query, limit) => {
+export const search = async (query, limit) => {
     let result = [];
     const data = await axios
         .get(URL_SEARCH(query), {
         ...Config,
     })
-        .catch((e) => {
-        return e.response;
-    });
-    if (data.data && data.data.result.length) {
+        .catch((e) => e === null || e === void 0 ? void 0 : e.response);
+    if (data.data && Array.isArray(data.data.result)) {
         let _tmp = [];
         for (const i of data.data.result) {
             _tmp.push({ ...i });
         }
-        _tmp = _tmp.filter((val, i) => i < (limit ? Number(limit) : 10));
+        _tmp = _tmp.filter((val, i) => i < (limit ? limit : 10));
         result = _tmp;
     }
     else {
         return {
-            status: false,
+            error: true,
             message: "failed to fetch data from {URL_SEARCH}",
         };
     }
     return result;
 };
-export { Search as search };
 /**
  * get hentai detail by id
  * @param {Number} id
- * @returns {Promise<Object>}
+ * @return {Promise<Object>}
  */
-export const getId = async (id) => {
+export const detail = async (id) => {
     let result;
     let data = await axios
         .get(URL_SERIES(id), {
         ...Config,
     })
-        .catch((e) => {
-        return e.response;
-    });
+        .catch((e) => e === null || e === void 0 ? void 0 : e.response);
     if (data.data && data.data.episode) {
         const temp = data.data;
-        let genre;
         if (temp.info_meta.genre && temp.info_meta.genre.length) {
             let _temp = [];
             for (const i of temp.info_meta.genre) {
@@ -135,7 +125,7 @@ export const getId = async (id) => {
             .catch((e) => {
             return e.response;
         });
-        if (data.data && data.data.stream.length) {
+        if (data.data && Array.isArray(data.data.stream)) {
             /** remove some unused <Object> */
             delete data.data["content"];
             delete data.data["slug"];
@@ -143,24 +133,20 @@ export const getId = async (id) => {
             result = data.data;
         }
         else {
-            result = {
-                status: false,
+            return {
+                error: true,
                 message: "Empty stream result {URL_POST} maybe wrong id or idk",
             };
         }
     }
     return result;
 };
-export { getId as detail };
-const nekopoi = {
-    search: Search,
-    latest: getRecent,
+const kucingPoi = {
+    search,
+    latest,
     list,
-    detail: getId,
-    Search,
-    getRecent,
-    getId
+    detail,
 };
-export default nekopoi;
-/** @encode */
+export default kucingPoi;
+/** Hello :) */
 //# sourceMappingURL=index.js.map

@@ -34,24 +34,25 @@
 
 - `CommonJS`
   ```js
-  const { Search, getRecent, list, getId } = require("nekopoi-scraper");
+  const { search, latest, list, detail } = require("nekopoi-scraper");
   ```
 - `ESM`
-  ```js
-  import { Search, getRecent, list, getId } from "nekopoi-scraper";
+  ```ts
+  import { search, latest, list, detail } from "nekopoi-scraper";
   ```
 
 ## Example
 
-<details><summary><b>Get hentai by query</b></summary>
+<details><summary><b>Search hentai by query</b></summary>
     
 ```js
-import { Search } from "nekopoi-scraper";
+import { search } from "nekopoi-scraper";
 
 const query = "love";
-const limit = 10; // limit output. default 10
-Search(query, limit).then(async (data) => {
-console.log(data);
+const limit = 10; // (optional) limit output. default 10
+
+search(query, limit).then((data) => {
+  console.log(data);
 });
 
 ````
@@ -71,12 +72,12 @@ Output
 
 </details>
 
-<details><summary><b>Get latest/recent hentai</b></summary>
+<details><summary><b>Get latest hentai</b></summary>
 
 ```js
-import { getRecent } from "nekopoi-scraper";
+import { latest } from "nekopoi-scraper";
 
-getRecent().then(async (data) => {
+latest().then((data) => {
   console.log(data);
 });
 ```
@@ -100,9 +101,9 @@ getRecent().then(async (data) => {
 <details><summary><b>Get hentai detail by id</b></summary>
 
 ```js
-import { getId } from "nekopoi-scraper";
+import { detail } from "nekopoi-scraper";
 
-getId(21910).then(async (data) => {
+detail(21910).then((data) => {
   console.log(data);
 });
 ```
@@ -180,7 +181,7 @@ import { list } from "nekopoi-scraper";
 
 const type = "jav"; // available "jav", "hentai"
 const page = 1; // optional
-list(type, page).then(async (data) => {
+list(type, page).then((data) => {
   console.log(data);
 });
 ```

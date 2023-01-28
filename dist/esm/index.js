@@ -6,7 +6,7 @@
  * @link (https://github.com/xct007/nekopoi-scraper)
  */
 import axios from "axios";
-import { Config, URL_RECENT, URL_LIST, URL_SEARCH, URL_POST, URL_SERIES, } from "./Config";
+import { Config, URL_RECENT, URL_LIST, URL_SEARCH, URL_POST, URL_SERIES, } from "./Config/index.js";
 /**
  * Get recent hentai
  * @return {Promise<Object>}

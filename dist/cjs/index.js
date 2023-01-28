@@ -12,7 +12,7 @@ exports.detail = exports.search = exports.list = exports.latest = void 0;
  * @link (https://github.com/xct007/nekopoi-scraper)
  */
 const axios_1 = __importDefault(require("axios"));
-const Config_1 = require("./Config");
+const index_js_1 = require("./Config/index.js");
 /**
  * Get recent hentai
  * @return {Promise<Object>}
@@ -20,8 +20,8 @@ const Config_1 = require("./Config");
 const latest = async () => {
     let result = [];
     const data = await axios_1.default
-        .get(Config_1.URL_RECENT, {
-        ...Config_1.Config,
+        .get(index_js_1.URL_RECENT, {
+        ...index_js_1.Config,
     })
         .catch((e) => e === null || e === void 0 ? void 0 : e.response);
     if (data.data && data.data.carousel) {
@@ -50,8 +50,8 @@ exports.latest = latest;
 const list = async (_type, page) => {
     let result = [];
     const data = await axios_1.default
-        .get((0, Config_1.URL_LIST)(_type ? _type : "hentai", page ? page : 1), {
-        ...Config_1.Config,
+        .get((0, index_js_1.URL_LIST)(_type ? _type : "hentai", page ? page : 1), {
+        ...index_js_1.Config,
     })
         .catch((e) => e === null || e === void 0 ? void 0 : e.response);
     if (data.data && Array.isArray(data.data.result)) {
@@ -79,8 +79,8 @@ exports.list = list;
 const search = async (query, limit) => {
     let result = [];
     const data = await axios_1.default
-        .get((0, Config_1.URL_SEARCH)(query), {
-        ...Config_1.Config,
+        .get((0, index_js_1.URL_SEARCH)(query), {
+        ...index_js_1.Config,
     })
         .catch((e) => e === null || e === void 0 ? void 0 : e.response);
     if (data.data && Array.isArray(data.data.result)) {
@@ -108,8 +108,8 @@ exports.search = search;
 const detail = async (id) => {
     let result;
     let data = await axios_1.default
-        .get((0, Config_1.URL_SERIES)(id), {
-        ...Config_1.Config,
+        .get((0, index_js_1.URL_SERIES)(id), {
+        ...index_js_1.Config,
     })
         .catch((e) => e === null || e === void 0 ? void 0 : e.response);
     if (data.data && data.data.episode) {
@@ -128,8 +128,8 @@ const detail = async (id) => {
     }
     else {
         data = await axios_1.default
-            .get((0, Config_1.URL_POST)(id), {
-            ...Config_1.Config,
+            .get((0, index_js_1.URL_POST)(id), {
+            ...index_js_1.Config,
         })
             .catch((e) => {
             return e.response;

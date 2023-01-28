@@ -13,7 +13,7 @@ import {
 	URL_SEARCH,
 	URL_POST,
 	URL_SERIES,
-} from "./Config/index";
+} from "./Config";
 
 /**
  * Get recent hentai

@@ -3,3 +3,4 @@ scripts
 tsconfig*.json
 tslint*.json
 .prettierrc
+.github

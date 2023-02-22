@@ -203,6 +203,22 @@ list(type, page).then((data) => {
 
 </details>
 
+<details><summary><b>Error handling</b></summary>
+
+```js
+import { search } from "nekopoi-scraper";
+
+const data = await search("milf", 15);
+if (data.error) {
+  console.log(data.message);
+} else {
+  console.log(data)
+}
+
+```
+
+</details>
+
 ## Contributing
 
 If have a suggestion that whould make this better, please fork and create a pull request. You can also simply open an issue. Don't forget to give the repo a star!

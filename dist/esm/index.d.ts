@@ -1,34 +1,13 @@
-/**
- * Get recent hentai
- * @return {Promise<Object>}
- */
-export declare const latest: () => Promise<object>;
-/**
- * Get all list ** by type.
- * @param {String} _type (optional), eg. "jav" or "hentai", default "hentai".
- * @param {Number} page (optional), eg. 2, default 1.
- * @return {Promise<Object>}
- */
-export declare const list: (_type?: string, page?: number) => Promise<object>;
-/**
- * get hentai by query.
- * @param {String} query
- * @param {Number} limit (optional), for number of output, eg. 10
- * @return {Promise<Object>}
- */
-export declare const search: (query: string, limit?: number) => Promise<object>;
-/**
- * get hentai detail by id
- * @param {Number} id
- * @return {Promise<Object>}
- */
-export declare const detail: (id: number) => Promise<object>;
-declare const kucingPoi: {
-    search: (query: string, limit?: number) => Promise<object>;
-    latest: () => Promise<object>;
-    list: (_type?: string, page?: number) => Promise<object>;
-    detail: (id: number) => Promise<object>;
+import { ResultDetail, ResultList, ResultRecent, ResultSearch, errorHandling } from "./Types";
+declare const latest: () => Promise<ResultRecent[] | errorHandling>;
+declare const list: (_type?: string, page?: number) => Promise<ResultList[] | errorHandling>;
+declare const search: (query: string, limit?: number) => Promise<ResultSearch[] | errorHandling>;
+declare const detail: (id: number) => Promise<ResultDetail | errorHandling>;
+export { search, latest, list, detail, };
+declare const _default: {
+    search: (query: string, limit?: number | undefined) => Promise<errorHandling | ResultSearch[]>;
+    latest: () => Promise<errorHandling | ResultRecent[]>;
+    list: (_type?: string | undefined, page?: number | undefined) => Promise<errorHandling | ResultList[]>;
+    detail: (id: number) => Promise<errorHandling | ResultDetail>;
 };
-export default kucingPoi;
-/** Hello :) */
-//# sourceMappingURL=index.d.ts.map
+export default _default;

@@ -1,5 +1,5 @@
 src
-images
+scripts
 tsconfig*.json
 tslint*.json
 .prettierrc

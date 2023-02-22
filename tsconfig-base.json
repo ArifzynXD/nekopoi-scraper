@@ -1,13 +1,16 @@
 {
   "display": "BASE",
   "compilerOptions": {
+      "removeComments": true,
       "declaration": true,
-      "sourceMap": true,
-      "declarationMap": true,
+      "sourceMap": false,
+      "declarationMap": false,
       "esModuleInterop": true,
       "checkJs": true,
       "target": "ES2019",
       "moduleResolution": "node",
+      "baseUrl": ".",
+      "experimentalDecorators": true,
       "strict": true,
       "allowJs": true,
   },

@@ -16,11 +16,9 @@
 <img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/xct007/nekopoi-scraper/main">
 </div>
 
-## Note:
-`Dont forget to star the repo :)`
-### How To Use
+## How To Use
 
-## Basic
+### Basic
 
 1. Install Packages
    ```sh
@@ -41,7 +39,7 @@
   import { search, latest, list, detail } from "nekopoi-scraper";
   ```
 
-## Example
+### Example
 
 <details><summary><b>Search hentai by query</b></summary>
     

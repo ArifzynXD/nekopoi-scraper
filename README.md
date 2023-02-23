@@ -22,11 +22,11 @@
 
 1. Install Packages
    ```sh
-   npm install nekopoi-scraper
-   ```
-   or using `yarn`
-   ```sh
    yarn add nekopoi-scraper
+   ```
+   or using test build
+   ```sh
+   yarn add github:xct007/nekopoi-scraper
    ```
 2. Import packages
 

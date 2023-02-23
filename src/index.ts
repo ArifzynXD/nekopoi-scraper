@@ -12,7 +12,7 @@ import {
 	URL_SEARCH,
 	URL_POST,
 	URL_SERIES,
-} from "./Constant";
+} from "./Constant.js";
 import {
 	ResultDetail,
 	ResultList,
@@ -155,7 +155,6 @@ const detail = async (id: number): Promise<ResultDetail | errorHandling> => {
 	}
 	return result;
 };
-
 export { search, latest, list, detail };
 export default {
 	search,

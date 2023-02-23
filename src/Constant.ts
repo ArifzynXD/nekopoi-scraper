@@ -8,7 +8,7 @@ const route: string = router.first + "/" + router.second;
 const Token: string =
 	"XbGSFkQsJYbFC6pcUMCFL4oNHULvHU7WdDAXYgpmq" +
 	"Ylh7p5ZCQ4QZ13GDgowiOGvAejz9X5H6DYvEQBMrc3A17SO3qwLwVkbn6YY";
-const appBuildCode: string = "25012";
+const appBuildCode: string = "25025";
 const appSignature: string =
 	"pOplm8IDEDGXN55IaYohQ8CzJFvWsfXyhGvwPRD9kW" +
 	"gzYSRuuvAOPfsE0AJbHVbAJyWGsGCNUIuQLJ7HbMbuFLMWwDgHNwxOrYMH";

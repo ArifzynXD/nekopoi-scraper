@@ -110,7 +110,7 @@ const detail = async (id) => {
     }
     return result;
 };
-export { search, latest, list, detail, };
+export { search, latest, list, detail };
 export default {
     search,
     latest,

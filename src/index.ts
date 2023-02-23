@@ -12,7 +12,7 @@ import {
 	URL_SEARCH,
 	URL_POST,
 	URL_SERIES,
-} from "./Constant.js";
+} from "./Constant";
 import {
 	ResultDetail,
 	ResultList,

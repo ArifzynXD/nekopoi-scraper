@@ -1,5 +1,9 @@
 <a name="readme-top"></a>
-<br />
+
+## Note
+I consider to do not maintain this repo anymore and remove the repos within npm package.
+if you still need the features that this repo offers you can have a look <a href="https://github.com/MoonLGH/nekoWrap">nekoWrap</a>
+___
 
 <h3 align="center">Simple</h3>
 <div align="center">
